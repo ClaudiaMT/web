@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+  <title>SMART GROCERY SHOPPING LIST</title>
+
+  
+ <!-- https://www.w3schools.com/cssref/css_colors.asp -->
+ <style>
+ html {
+  min-width: 600px;
+  padding: 0;
+  position: centered;
+}
+ 
+ body {
+  font-family: 'Arial', sans-serif;
+  min-width:600px;
+  padding: 0;
+  background-color:white;
+}
+
+.sectiuni {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: centered;
+  font-size: 1.11em;
+}
+
+.nume_parametru {
+  color:Black;
+  text-align:center;
+  font-family:Arial;
+  font-size: 1.11em;
+  font-weight: bold;
+}
+.buton {
+  background-color: DarkOrange;
+  border: none;
+  color: white;
+  padding: 2px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid Gray;
+  width: 80px;
+  font-size: 1em;
+  margin-right: 10px;
+  margin-top: 22px;
+  float: right;
+}
+}
+ </style>
+</head>
+
+<body>
+	<div style="position:fixed;top:0px;left:0px;width:100%;z-index:1000;height:70px;">
+		<img src="images/logo-raspberry-food-55x55.png" width="70" height="70" />
+		<span style="color:LimeGreen;font-family:Arial;font-size: 1.8em;font-weight: bold;">SMART GROCERY SHOPPING LIST</span>
+		<button class="buton" onclick="location.href='php_MySQL.html';">MySQL</button>
+		<button class="buton" onclick="location.href='bootstrap.html';">Bootstrap</button>
+		<button class="buton" onclick="location.href='index.html';">Home</button>
+	</div>
+	
+	<div class="sectiuni" style="background-image: url('images/fresh-white-eggs-2-500x320.jpg');margin-top:70px;">
+		<div style="text-align: center;">
+			<p class="nume_parametru">Eggs max. 6</p>		
+			<div id="oua_id" style="color:Blue;text-align:center;font-family:Arial;font-size: 2.5em;font-weight: bold;">
+			</div>
+		</div>
+	</div>
+	
+	<div class="sectiuni" style="background-image: url('images/why-white-sugar-3-1280x600.jpg');">
+		<div style="text-align: center;">
+			<p class="nume_parametru">Sugar max.1000[g]</p>
+			<div id="zahar_id" style="color:Blue;text-align:center;font-family:Arial;font-size: 2.5em;font-weight: bold;">
+			</div>
+		</div>
+	</div>
+	
+	<div class="sectiuni" style="background-image: url('images/flour-1170x683.jpg');">
+		<div style="text-align: center;">
+			<p class="nume_parametru">Flour max.1000[g]</p>
+			<div id="faina_id" style="color:Blue;text-align:center;font-family:Arial;font-size: 2.5em;font-weight: bold;">
+			</div>
+		</div>
+	</div>
+	
+	<div class="sectiuni" style="background-image: url('images/milk-4-1400x1016.jpg');">
+		<div style="text-align: center;">
+			<p class="nume_parametru">Milk max.5000[ml]</p>
+			<div id="lapte_id" style="color:Blue;text-align:center;font-family:Arial;font-size: 2.5em;font-weight: bold;">
+			</div>
+		</div>
+	</div>
+	
+	<div class="sectiuni" style="background-image: url('images/oil-2-1260x296.jpg');">
+		<div style="text-align: center;">
+			<p class="nume_parametru">Vegetable oil max.5000[ml]</p>
+			<div id="ulei_id" style="color:Blue;text-align:center;font-family:Arial;font-size: 2.5em;font-weight: bold;">
+			</div>
+		</div>
+	</div>
+	
+	<div class="sectiuni" style="background-image: url('images/mbr-1-1920x1275.jpg');border-width:0px; width:100%">
+				<br>
+				<div style="text-align: center;margin-left:40%">
+					<p style="color:White;text-align:left;font-family:Arial;font-size: 1.6em;">
+					Claudia Marinache Tataru<br>
+					10.LD.561<br>			
+					<a style="color:Yellow;" href="mailto:claudia.marinache@student.unitbv.ro">claudia.marinache@student.unitbv.ro</a>
+					</p>
+				</div>
+				<br>
+	</div>
+	
+	<div style="background-color:white;margin-top:10px; margin-bottom:10px">
+			<div style="text-align: center">
+				<a href="https://www.raspberrypi.org/products/raspberry-pi-zero/" target="_blank">
+					<img src="images/logo-raspberry.png" width="50" height="50" hspace="40"></a>
+	
+				<a href="https://www.raspbian.org/" target="_blank">
+					<img src="images/logo-raspbianOS.png" width="50" height="50" hspace="40"></a>	
+	
+				<a href="https://www.apache.org/" target="_blank">
+					<img src="images/logo-Apache.png" width="50" height="50" hspace="40"></a>
+			</div>
+	</div>
+	
+	<script>
+		function generareNrAleator(min, max){
+			return (Math.random() * (max-min) + min).toFixed(0).toString();
+		} 
+	</script>
+	
+	<!-- <script type="text/javascript" src="jquery-3.3.1.min.js"></script> -->
+		<script type="text/javascript">
+		function mesaj(){
+				alert('INFO:\n\nAcest proiect reprezinta o parte din tema proiectului realizat si prezentat la\n "Internet of Things" - dna. prof. Anca Vasilescu in data de 02.02.2019\n\nValorile numerice sunt generate aleator intr-un Javascript la interval de 1sec.\ndeoarece partea de hardware a proiectului nu este disponibila.\n\nSigla temei, conceptie proprie, a fost realizata folosind GIMP, fiserul "logo_raspberry_food.xcf"');
+	}
+	</script>
+		
+	<script type="text/javascript">
+                $(document).ready( function(){
+              $('#oua_id').load('oua.txt');
+//				$('#zahar_id').load('zahar.txt');
+//				$('#faina_id').load('faina.txt');
+//				$('#lapte_id').load('lapte.txt');
+//				$('#ulei_id').load('ulei.txt');
+				//$('#oua_id').text(generareNrAleator(0,6));
+				$('#zahar_id').text(generareNrAleator(0,1000));
+				$('#faina_id').text(generareNrAleator(0,1000));
+				$('#lapte_id').text(generareNrAleator(0,5000));
+				$('#ulei_id').text(generareNrAleator(0,5000));
+				mesaj();
+				refresh();
+                });
+
+				function refresh(){
+				  setTimeout( function(){
+						$('#oua_id').load('oua.txt');
+						//$('#zahar_id').load('zahar.txt');
+						//$('#faina_id').load('faina.txt');
+						//$('#lapte_id').load('lapte.txt');
+						//$('#ulei_id').load('ulei.txt');
+						//$('#oua_id').text(generareNrAleator(0,6));
+						$('#zahar_id').text(generareNrAleator(0,1000));
+						$('#faina_id').text(generareNrAleator(0,1000));
+						$('#lapte_id').text(generareNrAleator(0,5000));
+						$('#ulei_id').text(generareNrAleator(0,5000));
+						refresh();
+					}
+					, 2000);  //actualizeaza valorile aleatoare la interval de 1000ms = 1sec.
+				}
+	</script>
+  </body>
+</html>
